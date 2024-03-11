@@ -1,0 +1,175 @@
+<div style="font-family: sans-serif;">
+<header>
+        <div style="height: auto;">
+            <img src="assets/img/Logo.png" alt="Logo" height="40">
+        </div>
+        <div style="display: grid;">     
+            <h1>Yamuna Constructions</h1>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <!-- Hero Section -->
+    <section id="home" style="background-image: url(assets/img/Home.jpg);">
+      <div class="nav">
+        <nav>
+          <ul>                
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+    </div>
+        
+    <div class="text_container">
+        <h1>Welcome to Yamuna Constructions</h1>
+        <p style="color: #333;">Your trusted partner in construction projects</p>  
+    </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+    <section class="black_box">
+      <h2>About Us</h2>
+      <p>Founded in [2022], Yamuna Constructions has been a prominent player in the construction industry. With a rich history of delivering successful projects, we have built a legacy of reliability and excellence.</p>
+    </section>
+            
+        <section id="mission-values">
+            <div class="container">
+                <h2>Mission and Values</h2>
+                <div id="values-list">
+                    <div class="value">
+                        <h3>Quality</h3>
+                        <p>We are committed to delivering exceptional quality in every aspect of our work.</p>
+                    </div>
+                    <div class="value">
+                        <h3>Integrity</h3>
+                        <p>Our business is built on honesty, transparency, and ethical practices.</p>
+                    </div>
+                    <div class="value">
+                        <h3>Innovation</h3>
+                        <p>Embracing innovation to enhance project efficiency and outcomes.</p>
+                    </div>
+                    <div class="value">
+                        <h3>Client Satisfaction</h3>
+                        <p>Ensuring the success and satisfaction of our clients is our top priority.</p>
+                    </div>
+                    <div class="value">
+                        <h3>Sustainability</h3>
+                        <p>Integrating sustainable practices to minimize environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <section class="black_box">
+            <h2>Services, WE CAN DO FOR <span>YOU</span></h2>
+      </section> 
+   
+      <section id="service">
+          
+          <div class="grid_item">
+              <div class="card">
+                <div class="image_container">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOXlfx5nQnrVdKOBvqH-vHQKPSs2HWdXlgEA&usqp=CAU" alt="">
+                </div>
+                <div class="card_content">
+                  <h3>Residential Construction</h3>
+                  <p>
+                      We specialize in crafting dream homes with attention to detail, quality materials, and innovative design.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid_item">
+              <div class="card">
+                <div class="image_container">
+                  <img src="assets/img/s1.jpg" alt="">
+                </div>
+                <div class="card_content">
+                  <h3>Project Management</h3>
+                  <p>Our expert project management ensures smooth execution, timely completion, and cost-effectiveness for every project.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid_item">
+              <div class="card">
+                <div class="image_container">
+                  <img src="assets/img/s3.jpg" alt="">
+                </div>
+                <div class="card_content">
+                  <h3>Renovation and Remodeling</h3>
+                  <p>Transform your existing space into a modern and functional environment with our renovation and remodeling services.</p>
+                </div>
+              </div>
+            </div>
+      </section>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id = "projects">
+      <section class="black_box">
+          <h2>Projects</h2>
+      </section>
+      <section id="project">
+          <div class="grid_item">
+              <div class="card" style="max-width: 350px; padding-right: 10px;">
+                <div class="image_container">
+                  <img src="assets/img/P1.jpg" alt="" style="width: 330px;">
+                </div>
+                <div class="card_content">
+                  <a routerLink="/projects/project1" style="text-decoration: none; text-align: center;">Yamuna Pride Row-Bunglow <br> (Wing-B)</a>
+                </div>
+              </div>
+          </div>
+        </section>
+      </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="center-content">
+                    <h2>Contact Us</h2>
+                    <p>Contact form for inquiries and clear contact information.</p>
+                </div>
+            </div>
+            <div [formGroup]="form" class="contact-form">
+                <!-- Your contact form code goes here -->
+                <form action="#" method="post" (submit)="send()">
+                  <div class="formGroup">
+                    <label for="name">Name:</label>
+                    <input [class.is-invalid]="form.get('form_name')?.invalid" formControlName = "from_name" type="text" id="name" name="name" required>
+                    <div *ngIf="form.get('from_name')?.invalid && form.get('from_name')?.touched" class="error-message"style="color: red;">Please enter a valid Name.</div>
+                  </div>
+                  <div>
+                    <label for="phone">Phone No :</label>
+                    <input [class.is-invalid]="form.get('form_phone')?.invalid" formControlName = "from_phone" type="tel" id="number" name="number" required>
+                    <div *ngIf="form.get('from_phone')?.invalid && form.get('from_phone')?.touched" class="error-message"style="color: red;">Mobile is required. ( Enter 10  digit only)</div>
+                  </div>
+                  <div>
+                    <label for="email">Email:</label>
+                    <input [class.is-invalid]="form.get('form_email')?.invalid" formControlName = "from_email" type="email" id="email" name="email" required>
+                    <div *ngIf="form.get('form_email')?.invalid && form.get('form_email')?.touched" class="error-message" style="color: red;">Please enter a valid email address.</div>
+                  </div>
+                  <div>
+                    <label for="message">Message:</label>
+                    <textarea [class.is-invalid]="form.get('message')?.invalid" formControlName = "message" id="message" name="message" rows="4" required></textarea>
+                    <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched" class="error-message"style="color: red;">message is required.</div>
+
+                  </div>
+            
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+</div>

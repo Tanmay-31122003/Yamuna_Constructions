@@ -1,0 +1,46 @@
+.footer {
+    background-color: #124559; /* Choose your desired background color */
+    padding: 20px 0; /* Adjust padding as needed */
+  }
+  
+  .footer .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer .col-md-6 {
+    flex: 1;
+    padding: 0 15px; 
+    text-align: center;
+  }
+  
+  .footer .logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+  
+  .footer .contact-info {
+    text-align: center; /* Adjust alignment as needed */
+  }
+  
+  .footer .footer-line {
+    border-top: 1px solid #AEC3B0; /* Adjust line color and style */
+    margin: 0px 20px;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing as needed */
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
