@@ -25,7 +25,7 @@ export class HomepageComponent {
 
       emailjs.send("service_nn3nh2a","template_gj7klzb",{
       from_name: this.form.value.from_name,
-      to_name: this.form.value.to_name_name,
+      to_name: this.form.value.to_name,
       from_email: this.form.value.from_email,
       from_phone: this.form.value.from_phone,
       message: this.form.value.message,
